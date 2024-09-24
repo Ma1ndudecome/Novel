@@ -1,0 +1,284 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  flex-direction: column;
+  width: 100%;
+  cursor:url(/img/cursor.png), default;
+
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.play{
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    z-index: 99;
+    width: 20%;
+    justify-content: center;
+}
+.play a{
+    text-align: center;
+    height: 42%;
+    margin-bottom: 100px;
+    width: 76%;
+}
+
+
+.play a img{
+    width: 15%;
+    transition: 1s;
+}
+.play a img:hover{
+    transform: rotateZ(140deg); 
+}
+
+.circle{
+    width: 96%;
+    height: 100%;
+    border: 5px solid rgb(255, 255, 255);
+    border-radius: 50%;
+    background: rgb(0,220,223);
+    background: linear-gradient(0deg, rgba(0,220,223,1) 3%, rgba(76,146,147,1) 12%, rgba(0,0,0,1) 28%, rgba(0,0,0,1) 100%);
+    box-shadow: 0px 0px 10px white;
+    
+    
+}
+.button-plays{
+   width: 50%;
+   height: 50%;
+   clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+   border-radius: 10px;
+   background-color: white;
+   transform: rotateZ(90deg) translateY(-13px);
+    transition: 1s;
+    cursor:url(/img/cursorhover.png), default;
+}
+.button-plays:hover{
+   transform: rotateZ(450deg);
+}
+.plane-Avstralia{
+    position: absolute;
+    background-position: center;
+    width: 20%;
+    height: 35%;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    transform: rotateZ(-30deg);
+    animation: 20s forplane forwards linear,
+    10s forplanes2 10s forwards linear,
+    10s bottomforplane 15s forwards linear,
+    10s leftfor 20s forwards,
+    10s toleft 25s forwards linear,
+    5s peyyy 33s forwards linear;   
+}
+.plane-Avstralia img{
+    width: 100%;
+    height: 100%;
+}
+.under{
+    width: 100%;
+    height: 50%;
+    position: relative;
+}
+.bottom{
+    width: 34%;
+    height: 95%;
+    z-index: 1;
+    animation: 1.5s forbottom 32s; 
+    padding: 0 20px 0 20px;
+    background: linear-gradient(145deg, rgba(34, 49, 63, 0.85), rgba(52, 73, 94, 0.85));
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition:  0.3s 
+}
+.text{
+    text-align: center;
+    height: 75%;
+    padding: 0 20px 0 20px;
+    border-radius: 5px;
+    overflow: auto;
+}
+.text h1{
+    padding-top: 10px; 
+    font-family: 'Roboto', sans-serif;
+    color: #00bfff;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    
+}
+.text p{
+    font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  line-height: 1.5;
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.button{
+    height: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.button a{
+    position: relative;
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    border: 1px solid black;
+    width: 180px;
+    height: 40px;
+    border-radius: 5px;
+    transition: 0.5s;
+    z-index: 2;
+    
+}
+.button a:hover{
+    transform: translateY(-10px);
+}
+.button a:nth-child(1):hover{
+    box-shadow:  0px 0px 20px lightcoral;
+}
+.button a:nth-child(2):hover{
+    box-shadow:  0px 0px 20px lightgreen
+}
+.button a:nth-child(1):before{
+    content: '';
+    position: absolute;
+    background-color: rgb(236, 110, 110);
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top:0;
+    transition: 1s;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.button a:nth-child(1):hover::before{
+    width: 50%;
+}
+.button a:nth-child(1)::after{
+    content: '';
+    position: absolute;
+    background-color: rgb(236, 110, 110);
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    right: 0;
+    top:0;
+    transition: 1s;
+}
+.button a:nth-child(2):hover::after{
+    width: 50%;
+}
+.button a:nth-child(2):before{
+    content: '';
+    position: absolute;
+    background-color: lightgreen;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    left: 0;
+    top:0;
+    transition: 1s;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.button a:nth-child(2):hover::before{
+    width: 50%;
+}
+.button a:nth-child(2)::after{
+    content: '';
+    position: absolute;
+    background-color: lightgreen;
+    width: 0%;
+    height: 100%;
+    z-index: -1;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    right: 0;
+    top:0;
+    transition: 1s;
+}
+.button a:nth-child(1):hover::after{
+    width: 50%;
+}
+
+@keyframes forplane{
+    0%{
+        left:0
+    }
+    100%{
+        left:65%
+    }
+    
+}
+@keyframes forplanes2{
+   
+    100%{
+        transform: rotateZ(55deg);
+    }
+}
+@keyframes bottomforplane{
+    100%{
+        top:55%
+    }
+}
+@keyframes leftfor{
+    100%{
+        transform: rotateZ(150deg);
+    }
+}
+@keyframes toleft{
+    100%{
+        left:40%
+    }
+}
+@keyframes peyyy{
+    100%{
+        top:-30%;
+        transform: rotateZ(720deg) scale(0);
+
+    }
+}
+@keyframes forbottom{
+    0%{
+        bottom:0
+    }
+    50%{
+        transform: translateY(110px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.corsorHover{
+    cursor:url(/img/cursorhover.png), default;
+}

@@ -1,0 +1,120 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body{
+    height: 100%;
+    cursor: url(/img/cursor.png), default;
+    overflow: hidden;
+    font-family: "IBM Plex Serif", serif;
+    flex-direction: column;
+    background: linear-gradient(135deg, #000428 0%, #004e92 50%, #00c6ff 100%);
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    height: 90%;
+    box-shadow: 5px 5px 25px black;
+    background-size: 100% 100%;
+    border-radius: 10px;
+}
+.text{
+    height: 90%;
+    width: 70%;
+    overflow: hidden;
+    box-shadow: 5px 5px 25px rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.568);
+    border-radius: 15px;
+    padding: 10px;
+
+}
+
+.button{
+    height: 10%;
+    width: 100%;
+    z-index: 999;
+}
+
+.button_container{
+    width: 20%;
+    
+}
+
+.restart{
+    text-align: center;
+    text-decoration: none;
+    color:rgb(255, 255, 255);
+    background-color: rgb(117, 243, 85);
+    padding: 20px;
+    border-radius: 20px;
+    font-size: 18px;
+    transition: 0.5s;
+}
+.restart img{
+    width: 10%;
+    height: 100%;
+    transform: translateY(2px);
+}
+.restart:hover{
+    background-color: rgb(10, 247, 61);
+    padding: 21px;
+
+}
+.text_first_text{
+    padding-top: 10px;
+    color: white;
+    font-size: 25px;
+    transform: translateY(720px);
+    animation: to_top 75s linear forwards;
+    text-align: center;
+
+}
+.text_second_text{
+    color: white;
+    font-size: 25px;
+    transform: translateY(560px);
+    animation: block_to_top 100s 20s linear forwards;
+}
+.cursorHover{
+    cursor:url(/img/cursorhover.png), default;
+}
+
+@keyframes to_top{
+    100%{
+    transform: translateY(-720px);
+    }
+}
+@keyframes block_to_top{
+    100%{
+        transform: translateY(-1060px);
+    }
+}
+.flex{
+    display:flex
+}
+.align_center{
+    align-items: center;
+}
+.justify_center{
+    justify-content: center;
+}
+.flex_row{
+    flex-direction: row;
+}
+.flex_column{
+    flex-direction: column;
+}

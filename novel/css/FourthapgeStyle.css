@@ -1,0 +1,145 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+html,
+body{
+    height: 100%;
+    background-size: 100% 100%;
+    cursor: url(/img/cursor.png), default;
+    position: relative;
+    overflow: hidden;
+    background-image: url("https://images.wombo.art/generated/4f0a8ade-2b0d-4763-a0ff-934b26f23481/final.jpg?Expires=1733190702&Signature=w4wZDa5FY4CiySy1PlGZzTGIp-zmlrbR-QPXgVD7X-s8aCysnJ2kERMXBntFaypuNxZ7QL7w8TOmZpfOvtHM2OiU3YfrOwLAO1Nc4xhKbDM7C90PMnte~3VLWkWDnm5Tjgt0MZf46zepK9DhagjfojZeX9IrhNFfo7ekHCoktOxFIZIODtPRBnoGPCemyMyAvHRJpZET9ifAj4KwRG~Hzcgx8lH1prOb1NPjs-qW-wi59jG2bKlyLAm30mDl-oZg70ypAq1U~t1OWDb~q5IUNmW0LiV81WuWdT8c6r2KT9orLK3YIe9Mdp-~ZPRIrhtiOc1IupK2thu~v6vrUwXwiQ__&Key-Pair-Id=K1ZXCNMC55M2IL");
+}
+.naslidok{
+    width: 15%;
+    height: 10%;
+    position: absolute;
+    left:10%;
+    top:0;
+    background-color: lightgreen;
+    padding: 20px;
+    border-radius: 20px;
+    font-family: "Titillium Web", sans-serif;
+    overflow: auto;
+    font-size: 16px;
+    line-height: 1.3;
+}
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.corsorHover{
+    cursor:url(/img/cursorhover.png), default;
+}
+.plane-Avstralia{
+    position: absolute;
+    background-position: center;
+    width: 20%;
+    height: 35%;
+    top: 15%;
+    left: 0px;
+    z-index: 999;
+    transform: translateX(-350px);
+    animation: fly 5s 5s forwards;
+}
+.plane-Avstralia img{
+    width: 100%;
+    height: 100%;
+    transform: rotateZ(-40deg);
+
+}
+.box{
+    width: 40%;
+    height: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.box:hover{
+    box-shadow: 0px 0px 20px black;
+    transform: scale(1.02);
+}
+.text{
+    margin-top: 50px;
+    height: 70%;
+    width: 45%;
+    color:lightgreen;
+    font-size: 18px;
+    font-family: "Titillium Web", sans-serif;
+    transform: translateX(-800px) rotateZ(180deg);
+    animation: show 5s 1s forwards, rotate 2s 6s forwards, width 1s 8s forwards;
+    
+}
+
+.button{
+    height: calc(30% - 50px);
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 10px;
+}
+.button a{
+    width: 40%;
+    text-decoration: none;
+    font-family: "Titillium Web", sans-serif;
+    padding: 10px;
+    font-size: 15px;
+    color:white;
+    background-color: rgb(230, 108, 108);
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.button a:nth-child(1){
+    animation: vibrate 0.5s  linear infinite;
+
+}
+.button a:nth-child(2){
+    animation: vibrate2 0.5s linear infinite;
+}
+.button a:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 0px 10px lightgreen;
+}
+
+@keyframes vibrate {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    50% { transform: translateX(2px); }
+    75% { transform: translateX(-2px); }
+    100% { transform: translateX(0); }
+}
+@keyframes vibrate2 {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(2px); }
+    50% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+@keyframes show{
+    100%{
+        transform: translateX(0px) rotateZ(180deg);
+    }
+}
+@keyframes rotate{
+    100%{
+        transform: rotateZ(359.99deg);
+    }
+   
+}
+@keyframes width{
+    100%{
+        width: 85%;
+    }
+}
+@keyframes fly{
+    100%{
+        transform: translateX(0px);
+        left:150%
+    }
+}
